@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4636891622780528}
   - component: {fileID: 114290699034164692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Moon Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 33272050523589460}
   - component: {fileID: 23212761758775904}
   - component: {fileID: 135881397462853972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SUN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4231722084358196}
   - component: {fileID: 33825445559065742}
   - component: {fileID: 23066104070020018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MOON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 33799236729338474}
   - component: {fileID: 23731637706749956}
   - component: {fileID: 114520673116923620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EARTH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4005712113621128}
   - component: {fileID: 108666827499977394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SUN LIGHT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4542996484969316}
-  m_Layer: 0
+  - component: {fileID: 123960262313328384}
+  m_Layer: 9
   m_Name: Earth Moon System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +122,7 @@ GameObject:
   - component: {fileID: 4913756502457548}
   - component: {fileID: 198604675787414108}
   - component: {fileID: 199309990605301946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,6 +414,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   axis: {x: 0, y: 0, z: -1}
+--- !u!123 &123960262313328384
+LensFlare:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715839191946236}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!135 &135881397462853972
 SphereCollider:
   m_ObjectHideFlags: 1
