@@ -78,7 +78,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private void LateUpdate()
         {
-            if (IsListening && !Microphone.IsRecording(DeviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
+            if (IsListening && !isTransitioning && !Microphone.IsRecording(DeviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
             {
                 // If the microphone stops as a result of timing out, make sure to manually stop the dictation recognizer.
                 StartCoroutine(StopRecording());
@@ -119,7 +119,6 @@ namespace HoloToolkit.Unity.InputModule
                 yield break;
             }
 
-            IsListening = true;
             isTransitioning = true;
 
             if (listener != null)
@@ -157,6 +156,7 @@ namespace HoloToolkit.Unity.InputModule
             dictationAudioClip = Microphone.Start(DeviceName, false, recordingTime, samplingRate);
             textSoFar = new StringBuilder();
             isTransitioning = false;
+            IsListening = true;
 #else
             Debug.LogWarning("Unable to start recording!  Dictation is unsupported for this platform.");
             return null;
@@ -183,7 +183,6 @@ namespace HoloToolkit.Unity.InputModule
                 yield break;
             }
 
-            IsListening = false;
             isTransitioning = true;
 
             if (hasListener)
@@ -214,6 +213,7 @@ namespace HoloToolkit.Unity.InputModule
 
             PhraseRecognitionSystem.Restart();
             isTransitioning = false;
+            IsListening = false;
         }
 
         #region Dictation Recognizer Callbacks
