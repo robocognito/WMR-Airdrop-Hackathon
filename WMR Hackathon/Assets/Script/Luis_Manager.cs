@@ -40,6 +40,8 @@ public class Luis_Manager : Singleton<Luis_Manager>, IDictationHandler
     //Substitute the value of luis Endpoint with your own End Point
     string luisEndpoint = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/e2924829-8f07-410c-b71b-3db87f761d4e?subscription-key=2c9efc466726498f94f3ecc20f45de1d&verbose=true&timezoneOffset=0&q=";
 
+    private bool submittedRequest;
+
     /// <summary>
     /// Call LUIS to submit a dictation result.
     /// </summary>
@@ -50,9 +52,9 @@ public class Luis_Manager : Singleton<Luis_Manager>, IDictationHandler
             StartCoroutine(DictationInputManager.StartRecording());
             yield break;
         }
-        string queryString;
 
-        queryString = string.Concat(Uri.EscapeDataString(dictationResult));
+        submittedRequest = true;
+        string queryString = string.Concat(Uri.EscapeDataString(dictationResult));
 
         using (UnityWebRequest unityWebRequest = UnityWebRequest.Get(luisEndpoint + queryString))
         {
@@ -71,24 +73,17 @@ public class Luis_Manager : Singleton<Luis_Manager>, IDictationHandler
 
             //analyse the elements of the response 
             AnalyseResponseElements(analysedQuery);
-
-            yield return null;
         }
+
+        submittedRequest = false;
     }
 
-    public static Stream GenerateStreamFromString(string receivedString)
+    private void Update()
     {
-        MemoryStream stream = new MemoryStream();
-        StreamWriter writer = new StreamWriter(stream);
-        writer.Write(receivedString);
-        writer.Flush();
-        stream.Position = 0;
-        return stream;
-    }
-
-    private void Start()
-    {
-        StartCoroutine(DictationInputManager.StartRecording());
+        if (!DictationInputManager.IsListening && !submittedRequest)
+        {
+            StartCoroutine(DictationInputManager.StartRecording());
+        }
     }
 
     private void AnalyseResponseElements(AnalysedQuery aQuery)
@@ -128,8 +123,6 @@ public class Luis_Manager : Singleton<Luis_Manager>, IDictationHandler
                 Luis_Handler.Instance.ChangeObjectState(stateOfTarget, state);
                 break;
         }
-
-        StartCoroutine(DictationInputManager.StartRecording());
     }
 
     public void OnDictationHypothesis(DictationEventData eventData)
@@ -139,9 +132,7 @@ public class Luis_Manager : Singleton<Luis_Manager>, IDictationHandler
     public void OnDictationResult(DictationEventData eventData)
     {
         Debug.Log(eventData.DictationResult);
-
         StartCoroutine(DictationInputManager.StopRecording());
-
         StartCoroutine(SubmitRequestToLuis(eventData.DictationResult));
         eventData.Use();
     }

@@ -43,10 +43,6 @@ public class Luis_Handler : Singleton<Luis_Handler>
                 stateHandler.OnStateChange(newState);
             }
         }
-        else
-        {
-            Debug.LogWarning("no target found!");
-        }
     }
 
     private GameObject FindTarget(string targetName)

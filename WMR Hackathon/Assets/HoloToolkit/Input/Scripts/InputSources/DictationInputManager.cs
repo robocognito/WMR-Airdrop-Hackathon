@@ -119,6 +119,7 @@ namespace HoloToolkit.Unity.InputModule
                 yield break;
             }
 
+            IsListening = true;
             isTransitioning = true;
 
             if (listener != null)
@@ -157,7 +158,6 @@ namespace HoloToolkit.Unity.InputModule
             dictationAudioClip = Microphone.Start(DeviceName, false, recordingTime, samplingRate);
             textSoFar = new StringBuilder();
             isTransitioning = false;
-            IsListening = true;
 #else
             Debug.LogWarning("Unable to start recording!  Dictation is unsupported for this platform.");
             return null;
@@ -169,7 +169,6 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         public static IEnumerator StopRecording()
         {
-            Debug.Log(StopRecording());
             yield return Instance.StopRecordingInternal();
         }
 
@@ -243,7 +242,6 @@ namespace HoloToolkit.Unity.InputModule
             textSoFar.Append(text + ". ");
 
             dictationResult = textSoFar.ToString();
-            Debug.Log(dictationResult);
             InputManager.Instance.RaiseDictationResult(Instance, 0, dictationResult);
         }
 
