@@ -66,9 +66,12 @@ namespace HoloToolkit.Unity.InputModule
         protected override void RemoveControllerTransform(MotionControllerInfo oldController)
         {
 #if UNITY_WSA && UNITY_2017_2_OR_NEWER
-            if (IsAttached && oldController.Handedness == Handedness)
+            if (IsAttached)
             {
-                base.RemoveControllerTransform(oldController);
+                if (oldController != null)
+                {
+                    base.RemoveControllerTransform(oldController);
+                }
 
                 OnDetachFromController();
 
