@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1404556238}
+  Cupola: {fileID: 1379746665}
 --- !u!4 &397757180 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4091425641206588, guid: ae3e3a49fbb2ad1489c8db9b37b5fb0d,
@@ -338,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1864933321}
+  Cupola: {fileID: 0}
 --- !u!1 &809201132 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1748074740189742, guid: ae3e3a49fbb2ad1489c8db9b37b5fb0d,
@@ -355,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1864933322}
+  Cupola: {fileID: 0}
 --- !u!1 &867629612
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1175761235}
+  Cupola: {fileID: 0}
 --- !u!1001 &960919760
 Prefab:
   m_ObjectHideFlags: 0
@@ -669,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1864933324}
+  Cupola: {fileID: 0}
 --- !u!1 &1504442347 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1311886295452834, guid: ae3e3a49fbb2ad1489c8db9b37b5fb0d,
@@ -686,6 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1272234455}
+  Cupola: {fileID: 0}
 --- !u!1001 &1563515550
 Prefab:
   m_ObjectHideFlags: 0
@@ -1028,6 +1034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1864933323}
+  Cupola: {fileID: 0}
 --- !u!4 &2031078485 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4442639064085152, guid: ae3e3a49fbb2ad1489c8db9b37b5fb0d,
@@ -1050,6 +1057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1798077503}
+  Cupola: {fileID: 0}
 --- !u!1 &2133984798 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1616314517215400, guid: ae3e3a49fbb2ad1489c8db9b37b5fb0d,
@@ -1067,6 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 1864933325}
+  Cupola: {fileID: 0}
 --- !u!4 &2136221190 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4744941307273328, guid: ae3e3a49fbb2ad1489c8db9b37b5fb0d,

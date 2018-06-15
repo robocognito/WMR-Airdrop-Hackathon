@@ -78,7 +78,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private void LateUpdate()
         {
-            if (IsListening && !isTransitioning && !Microphone.IsRecording(DeviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
+            if (IsListening && !Microphone.IsRecording(DeviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
             {
                 // If the microphone stops as a result of timing out, make sure to manually stop the dictation recognizer.
                 StartCoroutine(StopRecording());
@@ -112,6 +112,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <returns></returns>
         public static IEnumerator StartRecording(GameObject listener = null, float initialSilenceTimeout = 5f, float autoSilenceTimeout = 20f, int recordingTime = 10)
         {
+            Debug.Log("Start Recording");
 #if UNITY_WSA || UNITY_STANDALONE_WIN
             if (IsListening || isTransitioning)
             {
@@ -119,6 +120,7 @@ namespace HoloToolkit.Unity.InputModule
                 yield break;
             }
 
+            IsListening = true;
             isTransitioning = true;
 
             if (listener != null)
@@ -157,7 +159,6 @@ namespace HoloToolkit.Unity.InputModule
             dictationAudioClip = Microphone.Start(DeviceName, false, recordingTime, samplingRate);
             textSoFar = new StringBuilder();
             isTransitioning = false;
-            IsListening = true;
 #else
             Debug.LogWarning("Unable to start recording!  Dictation is unsupported for this platform.");
             return null;
@@ -169,7 +170,7 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         public static IEnumerator StopRecording()
         {
-            Debug.Log(StopRecording());
+            Debug.Log("Stop Recording");
             yield return Instance.StopRecordingInternal();
         }
 
@@ -241,9 +242,7 @@ namespace HoloToolkit.Unity.InputModule
         private static void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
         {
             textSoFar.Append(text + ". ");
-
             dictationResult = textSoFar.ToString();
-            Debug.Log(dictationResult);
             InputManager.Instance.RaiseDictationResult(Instance, 0, dictationResult);
         }
 
