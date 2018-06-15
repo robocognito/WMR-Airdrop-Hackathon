@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: b231f469256d8de47ad7b4545b512ede
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ' 1'
+    100002: //RootNode
+    100004: handBone
+    100006: handBoneBAD
+    100008: handTerminator
+    100010: handTerminatorBAD
+    100012: indexBone00
+    100014: indexBone00BAD
+    100016: indexBone01
+    100018: indexBone01BAD
+    100020: indexBone02
+    100022: indexBone02BAD
+    100024: indexTerminator
+    100026: indexTerminatorBAD
+    100028: middleBone00
+    100030: middleBone00BAD
+    100032: middleBone01
+    100034: middleBone01BAD
+    100036: middleBone02
+    100038: middleBone02BAD
+    100040: middleTerminator
+    100042: middleTerminatorBAD
+    100044: pinkyBone00
+    100046: pinkyBone00BAD
+    100048: pinkyBone01
+    100050: pinkyBone01BAD
+    100052: pinkyBone02
+    100054: pinkyBone02BAD
+    100056: pinkyTerminator
+    100058: pinkyTerminatorBAD
+    100060: ringBone00
+    100062: ringBone00BAD
+    100064: ringBone01
+    100066: ringBone01BAD
+    100068: ringBone02
+    100070: ringBone02BAD
+    100072: ringTerminator
+    100074: ringTerminatorBAD
+    100076: thumbBone00
+    100078: thumbBone00BAD
+    100080: thumbBone01
+    100082: thumbBone01BAD
+    100084: thumbBone02
+    100086: thumbBone02BAD
+    100088: thumbTerminator
+    100090: thumbTerminatorBAD
+    100092: wristBone
+    100094: wristBoneBAD
+    100096: tankerGloveLeft
+    400000: ' 1'
+    400002: //RootNode
+    400004: handBone
+    400006: handBoneBAD
+    400008: handTerminator
+    400010: handTerminatorBAD
+    400012: indexBone00
+    400014: indexBone00BAD
+    400016: indexBone01
+    400018: indexBone01BAD
+    400020: indexBone02
+    400022: indexBone02BAD
+    400024: indexTerminator
+    400026: indexTerminatorBAD
+    400028: middleBone00
+    400030: middleBone00BAD
+    400032: middleBone01
+    400034: middleBone01BAD
+    400036: middleBone02
+    400038: middleBone02BAD
+    400040: middleTerminator
+    400042: middleTerminatorBAD
+    400044: pinkyBone00
+    400046: pinkyBone00BAD
+    400048: pinkyBone01
+    400050: pinkyBone01BAD
+    400052: pinkyBone02
+    400054: pinkyBone02BAD
+    400056: pinkyTerminator
+    400058: pinkyTerminatorBAD
+    400060: ringBone00
+    400062: ringBone00BAD
+    400064: ringBone01
+    400066: ringBone01BAD
+    400068: ringBone02
+    400070: ringBone02BAD
+    400072: ringTerminator
+    400074: ringTerminatorBAD
+    400076: thumbBone00
+    400078: thumbBone00BAD
+    400080: thumbBone01
+    400082: thumbBone01BAD
+    400084: thumbBone02
+    400086: thumbBone02BAD
+    400088: thumbTerminator
+    400090: thumbTerminatorBAD
+    400092: wristBone
+    400094: wristBoneBAD
+    400096: tankerGloveLeft
+    2100000: TankerGlove
+    4300000: tankerGloveLeft
+    7400000: Close Glove Left
+    7400002: Neutral Glove Left
+    9500000: //RootNode
+    13700000: ' 1'
+    13700002: tankerGloveLeft
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TankerGlove
+    second: {fileID: 2100000, guid: 003d96ebe54288944bc2e965dd017e44, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Close Glove Left
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Neutral Glove Left
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
