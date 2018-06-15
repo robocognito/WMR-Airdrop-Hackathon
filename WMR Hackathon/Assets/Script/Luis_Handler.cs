@@ -56,6 +56,7 @@ public class Luis_Handler : Singleton<Luis_Handler>
         {
             case "airlock":
             case "door":
+            case "cupola":
                 return LocationManager.Instance.Airlock; // also cupola?
 
             case "light":

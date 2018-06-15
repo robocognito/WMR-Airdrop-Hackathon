@@ -21,7 +21,7 @@ public class CoverOpen : MonoBehaviour {
     private float openAmount = 0;
     private Cover[] _covers;
     public float openTime = 4;
-    private coverState currentState;
+    public coverState currentState;
 	// Use this for initialization
 	void Start () {
         audioSource = GetComponent<AudioSource>();
@@ -37,7 +37,7 @@ public class CoverOpen : MonoBehaviour {
             _covers[c].openRot = covers[c].transform.rotation;
             _covers[c].transform.Rotate(-172, 0, 0);
         }
-        Open();
+        //Open();
 	}
 	
     public void Open()

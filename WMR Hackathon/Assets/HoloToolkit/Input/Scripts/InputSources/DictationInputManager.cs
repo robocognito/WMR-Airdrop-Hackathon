@@ -125,6 +125,7 @@ namespace HoloToolkit.Unity.InputModule
             {
                 hasListener = true;
                 InputManager.Instance.PushModalInputHandler(listener);
+                Debug.Log(listener);
             }
 
             if (PhraseRecognitionSystem.Status == SpeechSystemStatus.Running)
@@ -168,6 +169,7 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         public static IEnumerator StopRecording()
         {
+            Debug.Log(StopRecording());
             yield return Instance.StopRecordingInternal();
         }
 
@@ -241,7 +243,7 @@ namespace HoloToolkit.Unity.InputModule
             textSoFar.Append(text + ". ");
 
             dictationResult = textSoFar.ToString();
-
+            Debug.Log(dictationResult);
             InputManager.Instance.RaiseDictationResult(Instance, 0, dictationResult);
         }
 

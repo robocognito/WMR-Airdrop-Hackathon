@@ -50,7 +50,6 @@ public class Luis_Manager : Singleton<Luis_Manager>, IDictationHandler
             StartCoroutine(DictationInputManager.StartRecording());
             yield break;
         }
-
         string queryString;
 
         queryString = string.Concat(Uri.EscapeDataString(dictationResult));
