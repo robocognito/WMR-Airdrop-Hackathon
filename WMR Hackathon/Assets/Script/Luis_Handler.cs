@@ -52,8 +52,12 @@ public class Luis_Handler : Singleton<Luis_Handler>
         {
             case "airlock":
             case "door":
+                return LocationManager.Instance.Airlock;
+
+            case "couple":
             case "cupola":
-                return LocationManager.Instance.Airlock; // also cupola?
+                moduleLight = LocationManager.Instance.Node3.GetComponent<ModuleLight>();
+                return moduleLight.Cupola;
 
             case "light":
             case "lights":
