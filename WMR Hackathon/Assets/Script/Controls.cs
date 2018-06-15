@@ -26,7 +26,6 @@ public class Controls : MonoBehaviour, IInputHandler, ISourcePositionHandler, IS
 
         if (_vel > 0)
         {
-            //Vector3 move2D = new Vector3(GazeManager.Instance.Rays[0].Direction.x, 0, GazeManager.Instance.Rays[0].Direction.z).normalized;
             Vector3 move3D = GazeManager.Instance.Rays[0].Direction;
             float moveSpeed = TopSpeed * Time.deltaTime * _vel;
             transform.position += move3D * moveSpeed;
@@ -35,7 +34,6 @@ public class Controls : MonoBehaviour, IInputHandler, ISourcePositionHandler, IS
 
     }
 
-    //move forward and accelerate based on the depth of press
     public void OnInputClicked(InputClickedEventData eventData)
     {
 
@@ -51,6 +49,7 @@ public class Controls : MonoBehaviour, IInputHandler, ISourcePositionHandler, IS
 
     public void OnPositionChanged(SourcePositionEventData eventData)
     {
+
     }
 
     public void OnRotationChanged(SourceRotationEventData eventData)

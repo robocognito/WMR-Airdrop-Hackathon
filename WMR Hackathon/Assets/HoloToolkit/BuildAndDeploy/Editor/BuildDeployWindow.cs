@@ -23,7 +23,7 @@ namespace HoloToolkit.Unity
 
         private const string SdkVersion =
 #if UNITY_2017_2_OR_NEWER
-                "10.0.16299.0";
+                "10.0.17134.0";
 #else
                 "10.0.15063.0";
 #endif
