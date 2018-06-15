@@ -20,9 +20,6 @@ public class crazyTest : MonoBehaviour, IInputHandler, ISourcePositionHandler, I
     {
         RotateRigidbody();
         MoveRigidbody();
-
-
-
     }
 
     private void RotateRigidbody()

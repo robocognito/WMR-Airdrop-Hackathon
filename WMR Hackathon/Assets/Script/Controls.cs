@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controls : MonoBehaviour, IInputHandler, ISourcePositionHandler, ISourceRotationHandler, ISourceStateHandler, ISelectHandler, IInputClickHandler
+public class Controls : MonoBehaviour, ISelectHandler
 {
     public float TopSpeed = 10;
     float _vel;
@@ -30,43 +30,11 @@ public class Controls : MonoBehaviour, IInputHandler, ISourcePositionHandler, IS
             float moveSpeed = TopSpeed * Time.deltaTime * _vel;
             transform.position += move3D * moveSpeed;
         }
-
-
     }
-
-    public void OnInputClicked(InputClickedEventData eventData)
-    {
-
-    }
-
-    public void OnInputDown(InputEventData eventData)
-    {
-    }
-
-    public void OnInputUp(InputEventData eventData)
-    {
-    }
-
-    public void OnPositionChanged(SourcePositionEventData eventData)
-    {
-
-    }
-
-    public void OnRotationChanged(SourceRotationEventData eventData)
-    {
-    }
-
 
     public void OnSelectPressedAmountChanged(SelectPressedEventData eventData)
     {
+        Debug.Log(eventData.PressedAmount);
         _lastPressAmount = (float)eventData.PressedAmount;
-    }
-
-    public void OnSourceDetected(SourceStateEventData eventData)
-    {
-    }
-
-    public void OnSourceLost(SourceStateEventData eventData)
-    {
     }
 }

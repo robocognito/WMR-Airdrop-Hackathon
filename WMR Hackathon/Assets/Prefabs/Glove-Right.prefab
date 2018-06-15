@@ -306,6 +306,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4264137494992530}
   - component: {fileID: 95342038002617128}
+  - component: {fileID: 114587373743004728}
+  - component: {fileID: 114958042818978328}
   m_Layer: 0
   m_Name: Glove-Right
   m_TagString: Untagged
@@ -534,7 +536,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747905929089096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.61237246, y: -0.35355338, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -542,7 +544,7 @@ Transform:
   - {fileID: 4872901640489130}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 240, y: 90, z: 240}
 --- !u!4 &4353747796608434
 Transform:
   m_ObjectHideFlags: 1
@@ -755,6 +757,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114587373743004728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747905929089096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701cce5d00e497946898674076854950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorGloves: {fileID: 95342038002617128}
+--- !u!114 &114958042818978328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747905929089096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae8f3c88e9704a4393cb8d904b62372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137794444509327468
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

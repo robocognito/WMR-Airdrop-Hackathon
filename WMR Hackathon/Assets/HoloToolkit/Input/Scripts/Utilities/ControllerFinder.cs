@@ -113,7 +113,7 @@ namespace HoloToolkit.Unity.InputModule
             {
                 if (!newController.TryGetElement(element, out elementTransform))
                 {
-                    Debug.LogError("Unable to find element of type " + element + " under controller " + newController.ControllerParent.name + "; not attaching.");
+                    //Debug.LogError("Unable to find element of type " + element + " under controller " + newController.ControllerParent.name + "; not attaching.");
                     return;
                 }
                 ControllerInfo = newController;
